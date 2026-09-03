@@ -1,6 +1,6 @@
 services:
   sma-emeter-simulator:
-    build: https://github.com/johblack18/sma-emeter-simulator
+    build: *
     image: sma-emeter-simulator:latest
     container_name: sma-emeter-simulator
     restart: unless-stopped
