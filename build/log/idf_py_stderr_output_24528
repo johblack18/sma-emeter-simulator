@@ -1,0 +1,49 @@
+Command: cmake -G Ninja -B C:\Users\sonny\Documents\sma12\sma-emeter-simulator\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.1-beta1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True C:\Users\sonny\Documents\sma12\sma-emeter-simulator
+CMake Warning (dev) at CMakeLists.txt:1 (project):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at C:/Espressif/tools/cmake/4.0.3/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "C:/Espressif/tools/esp-clang/esp-21.1.3_20260408/esp-clang/bin/clang.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: 'C:/Users/sonny/Documents/sma12/sma-emeter-simulator/build/CMakeFiles/CMakeScratch/TryCompile-pv9ts2'
+    
+    Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_409ba
+    [1/2] C:\Espressif\tools\esp-clang\esp-21.1.3_20260408\esp-clang\bin\clang.exe    -MD -MT CMakeFiles/cmTC_409ba.dir/testCCompiler.c.obj -MF CMakeFiles\cmTC_409ba.dir\testCCompiler.c.obj.d -o CMakeFiles/cmTC_409ba.dir/testCCompiler.c.obj -c C:/Users/sonny/Documents/sma12/sma-emeter-simulator/build/CMakeFiles/CMakeScratch/TryCompile-pv9ts2/testCCompiler.c
+    [2/2] C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Espressif\tools\esp-clang\esp-21.1.3_20260408\esp-clang\bin\clang.exe   CMakeFiles/cmTC_409ba.dir/testCCompiler.c.obj -o cmTC_409ba.exe -Wl,--out-implib,libcmTC_409ba.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+    FAILED: cmTC_409ba.exe 
+    C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Espressif\tools\esp-clang\esp-21.1.3_20260408\esp-clang\bin\clang.exe   CMakeFiles/cmTC_409ba.dir/testCCompiler.c.obj -o cmTC_409ba.exe -Wl,--out-implib,libcmTC_409ba.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+    ld.lld: error: unknown argument '--major-image-version'
+    ld.lld: error: unknown argument '--minor-image-version'
+    ld.lld: error: cannot open 0: No such file or directory
+    ld.lld: error: cannot open 0: No such file or directory
+    ld.lld: error: unable to find library -lkernel32
+    ld.lld: error: unable to find library -luser32
+    ld.lld: error: unable to find library -lgdi32
+    ld.lld: error: unable to find library -lwinspool
+    ld.lld: error: unable to find library -lshell32
+    ld.lld: error: unable to find library -lole32
+    ld.lld: error: unable to find library -loleaut32
+    ld.lld: error: unable to find library -luuid
+    ld.lld: error: unable to find library -lcomdlg32
+    ld.lld: error: unable to find library -ladvapi32
+    clang: error: ld command failed with exit code 1 (use -v to see invocation)
+    ninja: build stopped: subcommand failed.
+    
+    
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:1 (project)
+
+

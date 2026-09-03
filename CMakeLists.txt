@@ -4,6 +4,11 @@ cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 11)
 
+if (NOT MSVC)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+endif()
+
 # This CMake configuration assumes the following directory layout
 #
 # - speedwire-router
@@ -32,7 +37,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_INCLUDE_DIR} speedwi
 if (MSVC)
 target_link_libraries(${PROJECT_NAME} speedwire ws2_32.lib Iphlpapi.lib)
 else()
-target_link_libraries(${PROJECT_NAME} speedwire)
+target_link_libraries(${PROJECT_NAME} speedwire Threads::Threads)
 endif()
 
 set_target_properties(${PROJECT_NAME}
